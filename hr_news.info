@@ -57,6 +57,7 @@ features[field_instance][] = node-hr_news-field_funding_methods
 features[field_instance][] = node-hr_news-field_image
 features[field_instance][] = node-hr_news-field_locations
 features[field_instance][] = node-hr_news-field_organizations
+features[field_instance][] = node-hr_news-field_related_content
 features[field_instance][] = node-hr_news-field_sectors
 features[field_instance][] = node-hr_news-field_themes
 features[field_instance][] = node-hr_news-og_group_ref

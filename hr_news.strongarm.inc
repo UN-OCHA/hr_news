@@ -41,13 +41,13 @@ function hr_news_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '13',
-        ),
-        'redirect' => array(
           'weight' => '14',
         ),
+        'redirect' => array(
+          'weight' => '15',
+        ),
         'language' => array(
-          'weight' => '12',
+          'weight' => '13',
         ),
       ),
       'display' => array(),

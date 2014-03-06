@@ -478,6 +478,71 @@ function hr_news_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-hr_news-field_related_content'
+  $field_instances['node-hr_news-field_related_content'] = array(
+    'bundle' => 'hr_news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 12,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_related_content',
+    'label' => 'Related content',
+    'required' => 0,
+    'settings' => array(
+      'attributes' => array(
+        'class' => '',
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 1,
+        'insert_plugin' => 'raw_url',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-hr_news-field_sectors'
   $field_instances['node-hr_news-field_sectors'] = array(
     'bundle' => 'hr_news',
@@ -660,7 +725,7 @@ function hr_news_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -724,6 +789,7 @@ function hr_news_field_default_field_instances() {
   t('Image');
   t('Locations');
   t('Organization');
+  t('Related content');
   t('Sectors');
   t('Themes');
   t('Title');
