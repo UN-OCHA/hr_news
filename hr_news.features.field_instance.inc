@@ -843,12 +843,12 @@ function hr_news_field_default_field_instances() {
   t('Disasters');
   t('Funding Types');
   t('Funding methods');
+  t('Global Clusters');
   t('Groups audience');
   t('Image');
   t('Locations');
   t('Organization');
   t('Related content');
-  t('Sectors');
   t('Themes');
   t('Title');
 
