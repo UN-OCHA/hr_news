@@ -66,7 +66,7 @@ function hr_news_default_page_manager_pages() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'onecol';
+  $display->layout = 'radix_boxton';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -96,7 +96,7 @@ function hr_news_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-e888266b-1822-451c-851b-36d00e6ff24c';
-    $pane->panel = 'middle';
+    $pane->panel = 'contentmain';
     $pane->type = 'views_panes';
     $pane->subtype = 'hr_news-list';
     $pane->shown = TRUE;
@@ -118,7 +118,7 @@ function hr_news_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'e888266b-1822-451c-851b-36d00e6ff24c';
     $display->content['new-e888266b-1822-451c-851b-36d00e6ff24c'] = $pane;
-    $display->panels['middle'][0] = 'new-e888266b-1822-451c-851b-36d00e6ff24c';
+    $display->panels['contentmain'][0] = 'new-e888266b-1822-451c-851b-36d00e6ff24c';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -29,6 +29,7 @@ dependencies[] = og_moderation
 dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = panelizer
+dependencies[] = radix_layouts
 dependencies[] = search_api_autocomplete
 dependencies[] = strongarm
 dependencies[] = text
