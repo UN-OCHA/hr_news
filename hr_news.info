@@ -65,6 +65,7 @@ features[field_instance][] = node-hr_news-field_organizations
 features[field_instance][] = node-hr_news-field_related_content
 features[field_instance][] = node-hr_news-field_sectors
 features[field_instance][] = node-hr_news-field_themes
+features[field_instance][] = node-hr_news-group_content_access
 features[field_instance][] = node-hr_news-og_group_ref
 features[field_instance][] = node-hr_news-title_field
 features[node][] = hr_news
