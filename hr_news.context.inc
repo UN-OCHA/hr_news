@@ -27,11 +27,11 @@ function hr_news_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views--exp-hr_news-list' => array(
+        'views--exp-hr_news-page' => array(
           'module' => 'views',
-          'delta' => '-exp-hr_news-list',
+          'delta' => '-exp-hr_news-page',
           'region' => 'branding',
-          'weight' => '-9',
+          'weight' => '-10',
         ),
         'current_search-hr_current_search' => array(
           'module' => 'current_search',
@@ -69,11 +69,11 @@ function hr_news_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-3',
         ),
-        'mefibs-mefibs_hr_news--list--sorts' => array(
+        'mefibs-mefibs_hr_news--page--sorts' => array(
           'module' => 'mefibs',
-          'delta' => 'mefibs_hr_news--list--sorts',
+          'delta' => 'mefibs_hr_news--page--sorts',
           'region' => 'sidebar_first',
-          'weight' => '-1',
+          'weight' => '-2',
         ),
       ),
     ),

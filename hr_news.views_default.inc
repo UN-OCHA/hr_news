@@ -23,6 +23,7 @@ function hr_news_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page';
   $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -38,8 +39,8 @@ function hr_news_views_default_views() {
         'collapsible' => 0,
         'collapsible_label' => 'Sort options',
         'combine' => 1,
-        'combine_rewrite' => 'Publication Date Asc|Oldest first
-Publication Date Desc|Newest first
+        'combine_rewrite' => 'Date created Asc|Oldest first
+Date created Desc|Newest first
 Relevance Asc|Most relevant
 Relevance Desc|Least relevant',
         'reset' => 0,
@@ -88,40 +89,38 @@ Relevance Desc|Least relevant',
     'title_link' => 'content',
     'title_class' => '',
   );
-  /* Field: Indexed Node: Document type */
-  $handler->display->display_options['fields']['field_document_type']['id'] = 'field_document_type';
-  $handler->display->display_options['fields']['field_document_type']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_document_type']['field'] = 'field_document_type';
-  $handler->display->display_options['fields']['field_document_type']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_document_type']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_document_type']['bypass_access'] = 0;
-  /* Field: Indexed Node: Organization */
-  $handler->display->display_options['fields']['field_organizations']['id'] = 'field_organizations';
-  $handler->display->display_options['fields']['field_organizations']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_organizations']['field'] = 'field_organizations';
-  $handler->display->display_options['fields']['field_organizations']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_organizations']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_organizations']['bypass_access'] = 0;
-  /* Field: Indexed Node: Publication Date */
-  $handler->display->display_options['fields']['field_publication_date']['id'] = 'field_publication_date';
-  $handler->display->display_options['fields']['field_publication_date']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_publication_date']['field'] = 'field_publication_date';
-  $handler->display->display_options['fields']['field_publication_date']['settings'] = array(
-    'format_type' => 'short',
-    'fromto' => 'both',
-    'multiple_number' => '',
-    'multiple_from' => '',
-    'multiple_to' => '',
-  );
-  /* Field: Indexed Node: File(s) */
-  $handler->display->display_options['fields']['field_files_collection']['id'] = 'field_files_collection';
-  $handler->display->display_options['fields']['field_files_collection']['table'] = 'search_api_index_default_node_index';
-  $handler->display->display_options['fields']['field_files_collection']['field'] = 'field_files_collection';
-  $handler->display->display_options['fields']['field_files_collection']['label'] = 'Files';
-  $handler->display->display_options['fields']['field_files_collection']['link_to_entity'] = 0;
-  $handler->display->display_options['fields']['field_files_collection']['display'] = 'view';
-  $handler->display->display_options['fields']['field_files_collection']['view_mode'] = 'full';
-  $handler->display->display_options['fields']['field_files_collection']['bypass_access'] = 0;
+  /* Field: Indexed Node: Author */
+  $handler->display->display_options['fields']['author']['id'] = 'author';
+  $handler->display->display_options['fields']['author']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['author']['field'] = 'author';
+  $handler->display->display_options['fields']['author']['label'] = '';
+  $handler->display->display_options['fields']['author']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['author']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['author']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['author']['bypass_access'] = 0;
+  /* Field: Indexed Node: Date created */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = '';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created']['custom_date_format'] = 'c';
+  $handler->display->display_options['fields']['created']['link_to_entity'] = 0;
+  /* Field: Indexed Node: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['label'] = '';
+  $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
+  /* Field: Indexed Node: The main body text */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'search_api_index_default_node_index';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Sort criterion: Indexed Node: Date created */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'search_api_index_default_node_index';
@@ -139,8 +138,9 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['arguments']['og_group_ref']['id'] = 'og_group_ref';
   $handler->display->display_options['arguments']['og_group_ref']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['arguments']['og_group_ref']['field'] = 'og_group_ref';
-  $handler->display->display_options['arguments']['og_group_ref']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['og_group_ref']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['og_group_ref']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['og_group_ref']['default_argument_type'] = 'raw';
+  $handler->display->display_options['arguments']['og_group_ref']['default_argument_options']['index'] = '1';
   $handler->display->display_options['arguments']['og_group_ref']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['og_group_ref']['break_phrase'] = 0;
   $handler->display->display_options['arguments']['og_group_ref']['not'] = 0;
@@ -173,8 +173,8 @@ Relevance Desc|Least relevant',
     30037204 => 0,
   );
 
-  /* Display: List */
-  $handler = $view->new_display('panel_pane', 'List', 'list');
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['exposed_block'] = TRUE;
   $handler->display->display_options['mefibs'] = array(
     'blocks' => array(
@@ -187,33 +187,38 @@ Relevance Desc|Least relevant',
       'sort' => NULL,
       'items_per_page' => NULL,
     ),
-    'list' => array(
+    'page' => array(
       'sort_block' => 'sorts',
       'filter' => array(),
     ),
   );
-  $handler->display->display_options['pane_category']['name'] = 'News';
-  $handler->display->display_options['pane_category']['weight'] = '0';
-  $handler->display->display_options['allow']['use_pager'] = 0;
-  $handler->display->display_options['allow']['items_per_page'] = 0;
-  $handler->display->display_options['allow']['offset'] = 0;
-  $handler->display->display_options['allow']['link_to_view'] = 0;
-  $handler->display->display_options['allow']['more_link'] = 0;
-  $handler->display->display_options['allow']['path_override'] = 0;
-  $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
-  $handler->display->display_options['allow']['fields_override'] = 0;
-  $handler->display->display_options['argument_input'] = array(
-    'og_group_ref' => array(
-      'type' => 'context',
-      'context' => 'entity:node.nid',
-      'context_optional' => 0,
-      'panel' => '0',
-      'fixed' => '',
-      'label' => 'Indexed Node: Groups audience',
-    ),
+  $handler->display->display_options['path'] = 'node/%/news';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'RSS Feed';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['row_plugin'] = 'rss_fields';
+  $handler->display->display_options['row_options']['title_field'] = 'title_field';
+  $handler->display->display_options['row_options']['link_field'] = 'url';
+  $handler->display->display_options['row_options']['description_field'] = 'body';
+  $handler->display->display_options['row_options']['creator_field'] = 'author';
+  $handler->display->display_options['row_options']['date_field'] = 'created';
+  $handler->display->display_options['row_options']['guid_field_options'] = array(
+    'guid_field' => 'url',
+    'guid_field_is_permalink' => 0,
   );
-  $handler->display->display_options['inherit_panels_path'] = '1';
+  $handler->display->display_options['path'] = 'node/%/news/feed';
+  $handler->display->display_options['displays'] = array(
+    'default' => 'default',
+    'page' => 'page',
+    'list' => 0,
+  );
+  $handler->display->display_options['sitename_title'] = 0;
   $translatables['hr_news'] = array(
     t('Master'),
     t('more'),
@@ -232,16 +237,13 @@ Relevance Desc|Least relevant',
     t('last »'),
     t('There are no results'),
     t('Title'),
-    t('Document type'),
-    t('Organization'),
-    t('Publication Date'),
-    t('Files'),
     t('Date created'),
     t('Relevance'),
     t('All'),
     t('Search News'),
-    t('List'),
-    t('News'),
+    t('Page'),
+    t('Feed'),
+    t('RSS Feed'),
   );
   $export['hr_news'] = $view;
 
