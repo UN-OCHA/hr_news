@@ -83,7 +83,9 @@ Relevance Desc|Least relevant',
   $handler->display->display_options['fields']['title_field']['id'] = 'title_field';
   $handler->display->display_options['fields']['title_field']['table'] = 'search_api_index_default_node_index';
   $handler->display->display_options['fields']['title_field']['field'] = 'title_field';
-  $handler->display->display_options['fields']['title_field']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['title_field']['label'] = '';
+  $handler->display->display_options['fields']['title_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_field']['type'] = 'text_plain';
   $handler->display->display_options['fields']['title_field']['settings'] = array(
     'title_style' => '_none',
     'title_link' => 'content',
@@ -236,7 +238,6 @@ Relevance Desc|Least relevant',
     t('next ›'),
     t('last »'),
     t('There are no results'),
-    t('Title'),
     t('Date created'),
     t('Relevance'),
     t('All'),
