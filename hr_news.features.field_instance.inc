@@ -469,11 +469,14 @@ function hr_news_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'hser',
+      'module' => 'entityreference',
       'settings' => array(
         'editable' => 0,
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
       ),
-      'type' => 'hser_hierarchy',
+      'type' => 'entityreference_autocomplete',
       'weight' => 5,
     ),
   );
