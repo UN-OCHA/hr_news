@@ -469,14 +469,17 @@ function hr_news_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'shs',
       'settings' => array(
-        'editable' => 0,
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
+        'shs' => array(
+          'create_new_levels' => 0,
+          'create_new_terms' => 0,
+          'force_deepest' => 0,
+          'node_count' => 0,
+          'use_chosen' => 'always',
+        ),
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'taxonomy_shs',
       'weight' => 5,
     ),
   );
