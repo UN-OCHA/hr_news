@@ -19,7 +19,6 @@ dependencies[] = hr_operations
 dependencies[] = hr_sectors
 dependencies[] = hr_spaces
 dependencies[] = hr_themes
-dependencies[] = hser
 dependencies[] = image
 dependencies[] = link
 dependencies[] = list
