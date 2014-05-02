@@ -194,7 +194,7 @@ Relevance Desc|Least relevant',
       'filter' => array(),
     ),
   );
-  $handler->display->display_options['path'] = 'node/%/news';
+  $handler->display->display_options['path'] = 'node/%/blog';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed_1');
@@ -214,7 +214,7 @@ Relevance Desc|Least relevant',
     'guid_field' => 'url',
     'guid_field_is_permalink' => 0,
   );
-  $handler->display->display_options['path'] = 'node/%/news/feed';
+  $handler->display->display_options['path'] = 'node/%/blog/feed';
   $handler->display->display_options['displays'] = array(
     'default' => 'default',
     'page' => 'page',
