@@ -19,8 +19,8 @@ function hr_news_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'node/*/news' => 'node/*/news',
-        'node/*/news/*' => 'node/*/news/*',
+        'node/*/blog' => 'node/*/blog',
+        'node/*/blog/*' => 'node/*/blog/*',
       ),
     ),
   );
