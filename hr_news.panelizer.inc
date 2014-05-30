@@ -72,41 +72,6 @@ function hr_news_panelizer_defaults() {
     $display->content['new-3a6e0690-0615-45ee-a20a-19dd1c5ada3c'] = $pane;
     $display->panels['contentmain'][0] = 'new-3a6e0690-0615-45ee-a20a-19dd1c5ada3c';
     $pane = new stdClass();
-    $pane->pid = 'new-3b50bf34-0fd3-42c5-a5fa-6e66454e8fac';
-    $pane->panel = 'contentmain';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'media_thumbnail',
-        'image_link' => '',
-      ),
-      'context' => 'panelizer',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'col-md-3',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '3b50bf34-0fd3-42c5-a5fa-6e66454e8fac';
-    $display->content['new-3b50bf34-0fd3-42c5-a5fa-6e66454e8fac'] = $pane;
-    $display->panels['contentmain'][1] = 'new-3b50bf34-0fd3-42c5-a5fa-6e66454e8fac';
-    $pane = new stdClass();
     $pane->pid = 'new-86659990-3303-44cc-8516-b81b502f33c0';
     $pane->panel = 'contentmain';
     $pane->type = 'entity_field_extra';
@@ -125,11 +90,11 @@ function hr_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '86659990-3303-44cc-8516-b81b502f33c0';
     $display->content['new-86659990-3303-44cc-8516-b81b502f33c0'] = $pane;
-    $display->panels['contentmain'][2] = 'new-86659990-3303-44cc-8516-b81b502f33c0';
+    $display->panels['contentmain'][1] = 'new-86659990-3303-44cc-8516-b81b502f33c0';
     $pane = new stdClass();
     $pane->pid = 'new-a1c17d5f-7d03-415c-8cb3-27fc5ed16fd0';
     $pane->panel = 'contentmain';
@@ -152,11 +117,11 @@ function hr_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'a1c17d5f-7d03-415c-8cb3-27fc5ed16fd0';
     $display->content['new-a1c17d5f-7d03-415c-8cb3-27fc5ed16fd0'] = $pane;
-    $display->panels['contentmain'][3] = 'new-a1c17d5f-7d03-415c-8cb3-27fc5ed16fd0';
+    $display->panels['contentmain'][2] = 'new-a1c17d5f-7d03-415c-8cb3-27fc5ed16fd0';
     $pane = new stdClass();
     $pane->pid = 'new-e1b34355-54b1-44b1-8eb8-df9986e5ab7d';
     $pane->panel = 'sidebar';
