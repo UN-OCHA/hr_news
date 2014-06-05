@@ -69,12 +69,6 @@ function hr_news_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-3',
         ),
-        'mefibs-mefibs_hr_news--page--sorts' => array(
-          'module' => 'mefibs',
-          'delta' => 'mefibs_hr_news--page--sorts',
-          'region' => 'sidebar_first',
-          'weight' => '-2',
-        ),
       ),
     ),
   );
