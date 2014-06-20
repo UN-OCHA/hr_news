@@ -42,7 +42,7 @@ function hr_news_og_features_toggle($entity, $entity_id, $entity_type, $features
           'link_path' => 'node/'.$entity_id.'/blog',
           'link_title' => 'Blog',
           'menu_name' => OG_MENU_SINGLE_MENU_NAME,
-          'weight' => 6,
+          'weight' => 16,
           'plid' => $mlid,
         );
         menu_link_save($menu_link);
