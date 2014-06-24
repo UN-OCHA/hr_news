@@ -69,6 +69,12 @@ function hr_news_context_default_contexts() {
           'region' => 'sidebar_first',
           'weight' => '-3',
         ),
+        'facetapi-9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z' => array(
+          'module' => 'facetapi',
+          'delta' => '9ew5LitJZ6pWU71gbHp1XW9oAOBwV11z',
+          'region' => 'sidebar_first',
+          'weight' => '-2',
+        ),
       ),
     ),
   );
