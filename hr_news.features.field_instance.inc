@@ -99,7 +99,7 @@ function hr_news_field_default_field_instances() {
       'behaviors' => array(
         'og_widget' => array(
           'admin' => array(
-            'widget_type' => 'entityreference_autocomplete',
+            'widget_type' => 'options_select',
           ),
           'default' => array(
             'widget_type' => 'options_select',
