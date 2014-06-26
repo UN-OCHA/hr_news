@@ -41,7 +41,7 @@ function hr_news_views_api($module = NULL, $api = NULL) {
 function hr_news_node_info() {
   $items = array(
     'hr_news' => array(
-      'name' => t('News'),
+      'name' => t('Blog post'),
       'base' => 'node_content',
       'description' => t('Use news for time-sensitive content like news, press releases or blog posts.'),
       'has_title' => '1',
