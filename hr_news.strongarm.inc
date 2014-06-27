@@ -139,5 +139,12 @@ function hr_news_strongarm() {
   $strongarm->value = '[node:og-group-ref:0:url:path]/article/[node:title]';
   $export['pathauto_node_hr_news_pattern'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'publishcontent_hr_news';
+  $strongarm->value = '1';
+  $export['publishcontent_hr_news'] = $strongarm;
+
   return $export;
 }
