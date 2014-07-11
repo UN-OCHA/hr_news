@@ -424,7 +424,7 @@ Relevance Desc|Least relevant',
     1 => 0,
     30037204 => 0,
   );
-  /* Filter criterion: Content: Themes (field_themes) */
+  /* Filter criterion: Field: Themes (field_themes) */
   $handler->display->display_options['filters']['field_themes_target_id']['id'] = 'field_themes_target_id';
   $handler->display->display_options['filters']['field_themes_target_id']['table'] = 'field_data_field_themes';
   $handler->display->display_options['filters']['field_themes_target_id']['field'] = 'field_themes_target_id';

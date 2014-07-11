@@ -476,7 +476,15 @@ function hr_news_panelizer_defaults() {
   $display = new panels_display();
   $display->layout = 'radix_moscone';
   $display->layout_settings = array();
-  $display->panel_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'header' => NULL,
+      'sidebar' => NULL,
+      'contentmain' => NULL,
+      'footer' => NULL,
+    ),
+  );
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = 'f76092d4-765f-4753-82a8-73a5dad47fc8';
@@ -513,6 +521,31 @@ function hr_news_panelizer_defaults() {
     $pane->uuid = 'fd9a10db-6c46-4586-b4c5-5dc726fa610d';
     $display->content['new-fd9a10db-6c46-4586-b4c5-5dc726fa610d'] = $pane;
     $display->panels['contentmain'][0] = 'new-fd9a10db-6c46-4586-b4c5-5dc726fa610d';
+    $pane = new stdClass();
+    $pane->pid = 'new-f115094b-9ba9-4fc0-ae81-51948172934b';
+    $pane->panel = 'contentmain';
+    $pane->type = 'panels_mini';
+    $pane->subtype = 'hr_node_links';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'panelizer',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'f115094b-9ba9-4fc0-ae81-51948172934b';
+    $display->content['new-f115094b-9ba9-4fc0-ae81-51948172934b'] = $pane;
+    $display->panels['contentmain'][1] = 'new-f115094b-9ba9-4fc0-ae81-51948172934b';
     $pane = new stdClass();
     $pane->pid = 'new-4e3e3662-8577-4d6c-b1c4-a1f22193f0b6';
     $pane->panel = 'sidebar';
