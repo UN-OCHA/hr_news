@@ -47,7 +47,6 @@ Relevance Desc|Least relevant',
         'reset_label' => '',
         'is_secondary' => 0,
       ),
-      'mefibs_block_sort_bef' => 'sorts',
     ),
     'search_api_views_fulltext' => array(
       'bef_format' => 'default',
@@ -171,22 +170,6 @@ Relevance Desc|Least relevant',
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['exposed_block'] = TRUE;
-  $handler->display->display_options['mefibs'] = array(
-    'blocks' => array(
-      0 => array(
-        'name' => 'Sorts',
-        'machine_name' => 'sorts',
-      ),
-    ),
-    'extras' => array(
-      'sort' => NULL,
-      'items_per_page' => NULL,
-    ),
-    'page' => array(
-      'sort_block' => 'sorts',
-      'filter' => array(),
-    ),
-  );
   $handler->display->display_options['path'] = 'node/%/blog';
 
   /* Display: Feed */
