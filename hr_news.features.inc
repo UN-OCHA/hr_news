@@ -51,4 +51,3 @@ function hr_news_node_info() {
   );
   return $items;
 }
-

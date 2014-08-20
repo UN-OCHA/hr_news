@@ -547,6 +547,32 @@ function hr_news_panelizer_defaults() {
     $display->content['new-f115094b-9ba9-4fc0-ae81-51948172934b'] = $pane;
     $display->panels['contentmain'][1] = 'new-f115094b-9ba9-4fc0-ae81-51948172934b';
     $pane = new stdClass();
+    $pane->pid = 'new-fce53ffb-f26f-4238-adfa-083f04c5e549';
+    $pane->panel = 'header';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => '',
+      'title' => '',
+      'body' => '<p>by <strong><a href="%node:author:url">%node:author</a></strong> on %node:created:hr_1</p>
+',
+      'format' => 'panopoly_wysiwyg_text',
+      'substitute' => 1,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'fce53ffb-f26f-4238-adfa-083f04c5e549';
+    $display->content['new-fce53ffb-f26f-4238-adfa-083f04c5e549'] = $pane;
+    $display->panels['header'][0] = 'new-fce53ffb-f26f-4238-adfa-083f04c5e549';
+    $pane = new stdClass();
     $pane->pid = 'new-4e3e3662-8577-4d6c-b1c4-a1f22193f0b6';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
