@@ -60,7 +60,7 @@ function hr_news_strongarm() {
           'weight' => '17',
         ),
         'language' => array(
-          'weight' => '15',
+          'weight' => '-10',
         ),
       ),
       'display' => array(),
