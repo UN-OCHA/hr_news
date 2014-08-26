@@ -106,6 +106,7 @@ features[og_features_permission][] = node:hr_space:view any unpublished hr_news 
 features[panelizer_defaults][] = node:hr_news:default:default
 features[panelizer_defaults][] = node:hr_news:default:search_result
 features[panelizer_defaults][] = node:hr_news:default:teaser
+features[variable][] = entity_translation_settings_node__hr_news
 features[variable][] = field_bundle_settings_node__hr_news
 features[variable][] = language_content_type_hr_news
 features[variable][] = menu_options_hr_news
