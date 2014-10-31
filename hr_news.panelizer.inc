@@ -419,6 +419,37 @@ function hr_news_panelizer_defaults() {
     $display->content['new-cd8259eb-457d-4579-8884-4f4605dc3397'] = $pane;
     $display->panels['sidebar'][9] = 'new-cd8259eb-457d-4579-8884-4f4605dc3397';
     $pane = new stdClass();
+    $pane->pid = 'new-66ee2d3c-9a26-4559-b8e0-2cfd9c0c51d3';
+    $pane->panel = 'sidebar';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_fundings';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'above',
+      'formatter' => 'entityreference_label',
+      'delta_limit' => '0',
+      'delta_offset' => '0',
+      'delta_reversed' => 0,
+      'formatter_settings' => array(
+        'link' => 0,
+      ),
+      'context' => 'panelizer',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 10;
+    $pane->locks = array();
+    $pane->uuid = '66ee2d3c-9a26-4559-b8e0-2cfd9c0c51d3';
+    $display->content['new-66ee2d3c-9a26-4559-b8e0-2cfd9c0c51d3'] = $pane;
+    $display->panels['sidebar'][10] = 'new-66ee2d3c-9a26-4559-b8e0-2cfd9c0c51d3';
+    $pane = new stdClass();
     $pane->pid = 'new-8448c14d-4f8d-437b-acf7-c154034dc9f6';
     $pane->panel = 'sidebar';
     $pane->type = 'entity_field';
@@ -444,11 +475,11 @@ function hr_news_panelizer_defaults() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 10;
+    $pane->position = 11;
     $pane->locks = array();
     $pane->uuid = '8448c14d-4f8d-437b-acf7-c154034dc9f6';
     $display->content['new-8448c14d-4f8d-437b-acf7-c154034dc9f6'] = $pane;
-    $display->panels['sidebar'][10] = 'new-8448c14d-4f8d-437b-acf7-c154034dc9f6';
+    $display->panels['sidebar'][11] = 'new-8448c14d-4f8d-437b-acf7-c154034dc9f6';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $panelizer->display = $display;

@@ -56,6 +56,7 @@ features[field_instance][] = node-hr_news-field_bundles
 features[field_instance][] = node-hr_news-field_coordination_hubs
 features[field_instance][] = node-hr_news-field_disasters
 features[field_instance][] = node-hr_news-field_funding_methods
+features[field_instance][] = node-hr_news-field_fundings
 features[field_instance][] = node-hr_news-field_image
 features[field_instance][] = node-hr_news-field_locations
 features[field_instance][] = node-hr_news-field_organizations
