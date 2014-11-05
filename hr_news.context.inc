@@ -33,6 +33,12 @@ function hr_news_context_default_contexts() {
           'region' => 'branding',
           'weight' => '-10',
         ),
+        'search_api_sorts-search-sorts' => array(
+          'module' => 'search_api_sorts',
+          'delta' => 'search-sorts',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'current_search-hr_current_search' => array(
           'module' => 'current_search',
           'delta' => 'hr_current_search',
