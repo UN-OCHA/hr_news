@@ -220,7 +220,7 @@ function hr_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Image */
+  /* Field: Content: Icon */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -377,21 +377,26 @@ function hr_news_views_default_views() {
     1 => 0,
     30037204 => 0,
   );
-  /* Filter criterion: Field: Themes (field_themes) */
-  $handler->display->display_options['filters']['field_themes_target_id']['id'] = 'field_themes_target_id';
-  $handler->display->display_options['filters']['field_themes_target_id']['table'] = 'field_data_field_themes';
-  $handler->display->display_options['filters']['field_themes_target_id']['field'] = 'field_themes_target_id';
-  $handler->display->display_options['filters']['field_themes_target_id']['group'] = 1;
-  $handler->display->display_options['filters']['field_themes_target_id']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_themes_target_id']['expose']['operator_id'] = 'field_themes_target_id_op';
-  $handler->display->display_options['filters']['field_themes_target_id']['expose']['label'] = 'Themes';
-  $handler->display->display_options['filters']['field_themes_target_id']['expose']['operator'] = 'field_themes_target_id_op';
-  $handler->display->display_options['filters']['field_themes_target_id']['expose']['identifier'] = 'field_themes_target_id';
-  $handler->display->display_options['filters']['field_themes_target_id']['expose']['remember_roles'] = array(
+  /* Filter criterion: Field: Themes (field_themes) (reference filter) */
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['id'] = 'field_themes_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['table'] = 'field_data_field_themes';
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['field'] = 'field_themes_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['group'] = 1;
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['expose']['operator_id'] = 'field_themes_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['expose']['label'] = 'Themes';
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['expose']['operator'] = 'field_themes_target_id_entityreference_filter_op';
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['expose']['identifier'] = 'field_themes_target_id_entityreference_filter';
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     30037204 => 0,
+    200153887 => 0,
+    218860149 => 0,
+    188284353 => 0,
+    235660466 => 0,
   );
+  $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['reference_display'] = 'hr_themes:entityreference_1';
   $handler->display->display_options['pane_title'] = 'News per space';
   $handler->display->display_options['pane_category']['name'] = 'News';
   $handler->display->display_options['pane_category']['weight'] = '0';
