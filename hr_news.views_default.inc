@@ -13,7 +13,7 @@ function hr_news_views_default_views() {
   $view = new view();
   $view->name = 'hr_news';
   $view->description = '';
-  $view->tag = 'Documents';
+  $view->tag = 'news';
   $view->base_table = 'search_api_index_default_node_index';
   $view->human_name = 'News';
   $view->core = 7;
@@ -192,7 +192,7 @@ function hr_news_views_default_views() {
   $view = new view();
   $view->name = 'hr_news_panes';
   $view->description = '';
-  $view->tag = 'Documents';
+  $view->tag = 'news';
   $view->base_table = 'node';
   $view->human_name = 'News Panes';
   $view->core = 7;
@@ -202,6 +202,7 @@ function hr_news_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
@@ -280,6 +281,7 @@ function hr_news_views_default_views() {
 
   /* Display: List */
   $handler = $view->new_display('panel_pane', 'List', 'list');
+  $handler->display->display_options['link_url'] = 'search';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
