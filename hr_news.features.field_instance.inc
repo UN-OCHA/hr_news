@@ -852,7 +852,6 @@ function hr_news_field_default_field_instances() {
   t('Clusters/Sectors');
   t('Coordination hubs');
   t('Disasters');
-  t('Funding methods');
   t('Fundings');
   t('Global Clusters');
   t('Group content visibility');

@@ -158,6 +158,12 @@ function hr_news_views_default_views() {
     'list' => 0,
   );
   $handler->display->display_options['sitename_title'] = 0;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'global_page');
+  $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['path'] = 'blog';
   $translatables['hr_news'] = array(
     t('Master'),
     t('more'),
@@ -213,7 +219,7 @@ function hr_news_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Icon */
+  /* Field: Content: Image */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -248,7 +254,7 @@ function hr_news_views_default_views() {
   $handler->display->display_options['sorts']['title_field_value']['field'] = 'title_field_value';
   $handler->display->display_options['sorts']['title_field_value']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['title_field_value']['expose']['label'] = 'Title';
-  /* Contextual filter: Content: Space(s) (og_group_ref) */
+  /* Contextual filter: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['arguments']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['arguments']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
@@ -292,7 +298,7 @@ function hr_news_views_default_views() {
     'hr_news' => 'hr_news',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Space(s) (og_group_ref) */
+  /* Filter criterion: Field: Space(s) (og_group_ref) */
   $handler->display->display_options['filters']['og_group_ref_target_id']['id'] = 'og_group_ref_target_id';
   $handler->display->display_options['filters']['og_group_ref_target_id']['table'] = 'og_membership';
   $handler->display->display_options['filters']['og_group_ref_target_id']['field'] = 'og_group_ref_target_id';
