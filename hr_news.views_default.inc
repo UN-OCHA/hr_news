@@ -281,6 +281,8 @@ function hr_news_views_default_views() {
 
   /* Display: List */
   $handler = $view->new_display('panel_pane', 'List', 'list');
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'custom_url';
   $handler->display->display_options['link_url'] = 'search';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
