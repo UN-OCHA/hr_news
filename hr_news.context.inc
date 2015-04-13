@@ -76,6 +76,11 @@ function hr_news_context_default_contexts() {
         ),
       ),
     ),
+    'disable_context' => array(
+      'disabled' => array(
+        'outside_space' => 'outside_space',
+      ),
+    ),
   );
   $context->condition_mode = 0;
 
