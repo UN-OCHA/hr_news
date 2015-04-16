@@ -397,8 +397,8 @@ function hr_news_views_default_views() {
     235660466 => 0,
   );
   $handler->display->display_options['filters']['field_themes_target_id_entityreference_filter']['reference_display'] = 'hr_themes:entityreference_1';
-  $handler->display->display_options['pane_title'] = 'News per space';
-  $handler->display->display_options['pane_category']['name'] = 'News';
+  $handler->display->display_options['pane_title'] = 'Dynamic';
+  $handler->display->display_options['pane_category']['name'] = 'Blog posts';
   $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 'use_pager';
   $handler->display->display_options['allow']['items_per_page'] = 'items_per_page';
